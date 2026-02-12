@@ -1,0 +1,1060 @@
+/* @name Purple Mushroom Fantasy */
+/* @version 1.0.1 */
+
+/* ========================================
+OBSIDIAN THEME: Purple Mushroom Fantasy
+AUTHOR: DA Rasmussen
+LICENSE: CC0-1.0
+VERSION: 1.0.1
+======================================== */
+/* -
+GLOBAL RESETS & FOUNDATIONS
+- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Font Stack */
+    --default-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-monospace: "Source Code Pro", "Fira Code", Consolas, monospace;
+    
+    /* Typography from Style Settings */
+    --font-size-normal: 16px;
+    --font-size-code: 15px;
+    --line-height-normal: 1.5;
+}
+
+/* ========================================
+   DARK THEME - Purple Mushroom Fantasy
+   ======================================== */
+.theme-dark {
+  /* Core Mushroom Palette */
+  --mushroom-base: #0d1524;
+  --mushroom-deep: #240f3f;
+  --mushroom-mid: #2560a0;
+  --mushroom-accent: #40abd9;
+  --mushroom-highlight: #5140b0;
+  --mushroom-cap: #2a3a6d;
+  --mushroom-gill: #1a264a;
+  --mushroom-spore: #3a558c;
+  --mushroom-glow: #6bc8ff;
+  --mushroom-poison: #ff528f;
+  
+  /* Backgrounds */
+  --background-primary: var(--mushroom-base);
+  --background-primary-alt: var(--mushroom-deep);
+  --background-secondary: var(--mushroom-deep);
+  --background-secondary-alt: var(--mushroom-gill);
+  --background-modifier-border: var(--mushroom-spore);
+  --background-modifier-border-hover: var(--mushroom-mid);
+  --background-modifier-border-focus: var(--mushroom-accent);
+  --background-modifier-hover: rgba(40, 60, 100, 0.4);
+  --background-modifier-form-field: rgba(64, 171, 217, 0.1);
+  
+  /* Text */
+  --text-normal: #e0e6ff;
+  --text-muted: #a0b0d0;
+  --text-faint: #7080a0;
+  --text-on-accent: white;
+  --text-accent: var(--mushroom-accent);
+  --text-accent-hover: var(--mushroom-glow);
+  
+  /* Interactive */
+  --interactive-normal: var(--mushroom-spore);
+  --interactive-hover: var(--mushroom-mid);
+  --interactive-accent: var(--mushroom-accent);
+  --interactive-accent-hover: var(--mushroom-glow);
+  
+  /* Scrollbar */
+  --scrollbar-bg: var(--mushroom-gill);
+  --scrollbar-thumb-bg: var(--mushroom-spore);
+  --scrollbar-active-thumb-bg: var(--mushroom-mid);
+  
+  /* Icons */
+  --icon-color: var(--mushroom-accent);
+  --icon-color-hover: var(--mushroom-glow);
+  --icon-color-active: var(--mushroom-highlight);
+  
+  /* Status Bar */
+  --status-bar-background: var(--mushroom-deep);
+  
+  /* Buttons */
+  --button-normal: var(--mushroom-spore);
+  --button-hover: var(--mushroom-mid);
+  --button-active: var(--mushroom-accent);
+  
+  /* Tags */
+  --tag-color: var(--mushroom-highlight);
+  --tag-background: rgba(81, 64, 176, 0.2);
+  --tag-border-color: var(--mushroom-highlight);
+  
+  /* Blockquotes & Callouts */
+  --blockquote-border-color: var(--mushroom-accent);
+  --callout-color: var(--mushroom-highlight);
+  --callout-background: rgba(81, 64, 176, 0.15);
+  
+  /* Code */
+  --code-normal: #c0c8e0;
+  --code-background: var(--mushroom-gill);
+  
+  /* Tables */
+  --table-header-background: var(--mushroom-gill);
+  --table-row-even-background: rgba(24, 43, 89, 0.3);
+  --table-row-odd-background: rgba(37, 96, 160, 0.1);
+  
+  /* Graph */
+  --graph-line: var(--mushroom-spore);
+  --graph-node: var(--mushroom-accent);
+  --graph-node-tag: var(--mushroom-highlight);
+  --graph-node-focused: var(--mushroom-glow);
+  --graph-node-attachment: var(--mushroom-mid);
+  --graph-node-unresolved: var(--mushroom-poison);
+}
+
+/* ========================================
+   LIGHT THEME - Purple Mushroom Scifi
+   ======================================== */
+.theme-light {
+  /* Light Base Colors */
+  --mushroom-base: #f8fafc;        /* Very light background */
+  --mushroom-deep: #e2e8f0;        /* Light secondary */
+  --mushroom-mid: #cbd5e1;         /* Medium gray */
+  --mushroom-accent: #5e489c;      /* Purple from Scifi palette */
+  --mushroom-highlight: #5893b1;   /* Teal from Scifi palette */
+  --mushroom-cap: #f1f5f9;         /* Very light gray */
+  --mushroom-gill: #edf2f7;        /* Light gray */
+  --mushroom-spore: #cbd5e1;       /* Medium gray border */
+  --mushroom-glow: #7a63c4;        /* Lighter purple */
+  --mushroom-poison: #ff6b6b;      /* Warning red */
+  
+  /* Backgrounds */
+  --background-primary: var(--mushroom-base);
+  --background-primary-alt: var(--mushroom-deep);
+  --background-secondary: var(--mushroom-deep);
+  --background-secondary-alt: var(--mushroom-spore);
+  --background-modifier-border: var(--mushroom-spore);
+  --background-modifier-border-hover: var(--mushroom-mid);
+  --background-modifier-border-focus: var(--mushroom-accent);
+  --background-modifier-hover: rgba(94, 72, 156, 0.1);
+  --background-modifier-form-field: rgba(94, 72, 156, 0.05);
+  
+  /* Text */
+  --text-normal: #1e293b;          /* Dark slate */
+  --text-muted: #58667a;           /* Muted gray */
+  --text-faint: #94a3b8;           /* Light gray */
+  --text-on-accent: white;
+  --text-accent: var(--mushroom-glow);
+  --text-accent-hover: var(--mushroom-base);
+  
+  /* Interactive */
+  --interactive-normal: var(--mushroom-spore);
+  --interactive-hover: var(--mushroom-mid);
+  --interactive-accent: var(--mushroom-accent);
+  --interactive-accent-hover: var(--mushroom-glow);
+  
+  /* Scrollbar */
+  --scrollbar-bg: var(--mushroom-gill);
+  --scrollbar-thumb-bg: var(--mushroom-spore);
+  --scrollbar-active-thumb-bg: var(--mushroom-mid);
+  
+  /* Icons */
+  --icon-color: var(--mushroom-accent);
+  --icon-color-hover: var(--mushroom-glow);
+  --icon-color-active: var(--mushroom-highlight);
+  
+  /* Status Bar */
+  --status-bar-background: var(--mushroom-deep);
+  
+  /* Buttons */
+  --button-normal: var(--mushroom-spore);
+  --button-hover: var(--mushroom-mid);
+  --button-active: var(--mushroom-accent);
+  
+  /* Tags */
+  --tag-color: var(--mushroom-highlight);
+  --tag-background: rgba(88, 147, 177, 0.15);
+  --tag-border-color: var(--mushroom-highlight);
+  
+  /* Blockquotes & Callouts */
+  --blockquote-border-color: var(--mushroom-accent);
+  --callout-color: var(--mushroom-highlight);
+  --callout-background: rgba(88, 147, 177, 0.1);
+  
+  /* Code */
+  --code-normal: #334155;
+  --code-background: var(--mushroom-gill);
+  
+  /* Tables */
+  --table-header-background: var(--mushroom-gill);
+  --table-row-even-background: rgba(94, 72, 156, 0.05);
+  --table-row-odd-background: rgba(88, 147, 177, 0.05);
+  
+  /* Graph */
+  --graph-line: var(--mushroom-spore);
+  --graph-node: var(--mushroom-accent);
+  --graph-node-tag: var(--mushroom-highlight);
+  --graph-node-focused: var(--mushroom-glow);
+  --graph-node-attachment: var(--mushroom-mid);
+  --graph-node-unresolved: var(--mushroom-poison);
+}
+
+/* ========================================
+   ACCENT PRESETS
+   ======================================== */
+
+/* Default Blue Accent */
+body.accent-default {
+  --mushroom-accent: #40abd9;
+  --mushroom-glow: #6bc8ff;
+  --mushroom-highlight: #5140b0;
+}
+
+/* Purple Glow Accent */
+body.accent-purple {
+  --mushroom-accent: #9d6bff;
+  --mushroom-glow: #c49dff;
+  --mushroom-highlight: #7a42ff;
+}
+
+/* Emerald Green Accent */
+body.accent-emerald {
+  --mushroom-accent: #34d399;
+  --mushroom-glow: #6ee7b7;
+  --mushroom-highlight: #10b981;
+}
+
+/* Amber Glow Accent */
+body.accent-amber {
+  --mushroom-accent: #f59e0b;
+  --mushroom-glow: #fbbf24;
+  --mushroom-highlight: #d97706;
+}
+
+/* Rose Pink Accent */
+body.accent-rose {
+  --mushroom-accent: #fb7185;
+  --mushroom-glow: #fca5a5;
+  --mushroom-highlight: #f43f5e;
+}
+
+/* Crimson Red Accent */
+body.accent-crimson {
+  --mushroom-accent: #dc2626;
+  --mushroom-glow: #f87171;
+  --mushroom-highlight: #b91c1c;
+}
+
+/* ========================================
+   CORE PLUGIN SUPPORT
+   ======================================== */
+
+/* File Explorer */
+.nav-file-title,
+.nav-folder-title {
+  border-radius: var(--border-radius, 4px);
+  transition: all 0.2s ease;
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+  background: rgba(64, 171, 217, 0.1);
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  background: rgba(81, 64, 176, 0.3);
+  color: var(--mushroom-glow, #6bc8ff);
+  border-left: 3px solid var(--mushroom-accent, #40abd9);
+}
+
+.theme-light .nav-file-title.is-active,
+.theme-light .nav-folder-title.is-active {
+  color: var(--text-muted) !important; /* Dark text for visibility */
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1); /* Subtle contrast boost */
+}
+
+/* Graph View */
+.graph-view.color-fill {
+  color: var(--graph-node, #40abd9);
+}
+
+.graph-view.color-fill-focused {
+  color: var(--graph-node-focused, #6bc8ff);
+}
+
+.graph-view.color-fill-tag {
+  color: var(--graph-node-tag, #5140b0);
+}
+
+.graph-view.color-fill-attachment {
+  color: var(--graph-node-attachment, #2560a0);
+}
+
+.graph-view.color-fill-unresolved {
+  color: var(--graph-node-unresolved, #ff528f);
+}
+
+.graph-view.color-line {
+  color: var(--graph-line, #3a558c);
+}
+
+.graph-view.color-text {
+  color: var(--text-normal);
+}
+
+/* Search */
+.search-result {
+  border-left: 3px solid var(--mushroom-accent, #40abd9);
+}
+
+.search-result.is-active {
+  background: rgba(64, 171, 217, 0.15);
+}
+
+/* Backlinks & Outgoing Links */
+.workspace-leaf-content[data-type="backlink"] .search-result,
+.workspace-leaf-content[data-type="outgoing-link"] .search-result {
+  border-left: 3px solid var(--mushroom-highlight, #5140b0);
+}
+
+/* Outline */
+.workspace-leaf-content[data-type="outline"] .tree-item-self {
+  color: var(--text-muted);
+}
+
+.workspace-leaf-content[data-type="outline"] .tree-item-self:hover {
+  color: var(--text-accent);
+}
+
+.workspace-leaf-content[data-type="outline"] .tree-item-self.is-active {
+  color: var(--text-accent);
+  background: rgba(64, 171, 217, 0.1);
+}
+
+/* Command Palette */
+.suggestion-item.is-selected {
+  background: rgba(64, 171, 217, 0.2);
+  color: var(--text-normal);
+}
+
+/* Daily Notes */
+.workspace-leaf-content[data-type="daily-notes"] .nav-file-title {
+  color: var(--mushroom-accent);
+}
+
+/* Starred Notes */
+.workspace-leaf-content[data-type="starred"] .nav-file-title {
+  color: var(--mushroom-highlight);
+}
+
+/* Random Note */
+.workspace-leaf-content[data-type="random-note"] button {
+  background: var(--mushroom-accent);
+  color: white;
+}
+
+/* Sync Status */
+.sync-status-icon {
+  color: var(--mushroom-accent);
+}
+
+/* Tag Pane */
+.workspace-leaf-content[data-type="tag"] .tree-item-self {
+  color: var(--tag-color);
+}
+
+.workspace-leaf-content[data-type="tag"] .tree-item-self:hover {
+  color: var(--mushroom-glow);
+}
+
+/* ========================================
+   UI ELEMENTS
+   ======================================== */
+
+/* Status Bar */
+.status-bar {
+  background: var(--status-bar-background, #182b59);
+  border-top: 1px solid var(--mushroom-spore, #3a558c);
+  color: var(--text-muted);
+}
+
+.status-bar-item:hover {
+  color: var(--mushroom-accent, #40abd9);
+}
+
+.status-bar-off .status-bar {
+  display: none;
+}
+
+/* Ribbon */
+.ribbon-off .workspace-ribbon {
+  display: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-bg);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-active-thumb-bg);
+}
+
+/* Buttons */
+button,
+.button {
+  background: var(--button-normal);
+  color: var(--text-normal);
+  border: 1px solid var(--mushroom-spore);
+  border-radius: var(--border-radius, 6px);
+  padding: 6px 16px;
+  transition: all 0.2s ease;
+}
+
+button:hover,
+.button:hover {
+  background: var(--button-hover);
+  border-color: var(--mushroom-mid);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button.mod-cta,
+.button.mod-cta {
+  background: var(--mushroom-accent);
+  color: white;
+  border-color: var(--mushroom-accent);
+}
+
+button.mod-cta:hover {
+  background: var(--mushroom-glow);
+  border-color: var(--mushroom-glow);
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+  accent-color: var(--mushroom-accent);
+}
+
+/* ========================================
+   MARKDOWN STYLING
+   ======================================== */
+
+/* Headings */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  color: var(--h1-color, var(--mushroom-highlight));
+  font-weight: 600;
+}
+
+.heading-divider h1,
+.heading-divider h2,
+.heading-divider h3,
+.heading-divider h4,
+.heading-divider h5,
+.heading-divider h6 {
+  border-bottom: 2px solid var(--mushroom-spore);
+  padding-bottom: 4px;
+}
+
+.colorful-headings .markdown-preview-view h1 { color: var(--h1-color, #5140b0); }
+.colorful-headings .markdown-preview-view h2 { color: var(--h2-color, #40abd9); }
+.colorful-headings .markdown-preview-view h3 { color: var(--mushroom-mid, #2560a0); }
+.colorful-headings .markdown-preview-view h4 { color: var(--mushroom-accent, #40abd9); }
+.colorful-headings .markdown-preview-view h5 { color: var(--mushroom-highlight, #5140b0); }
+.colorful-headings .markdown-preview-view h6 { color: var(--text-muted); }
+
+/* Links */
+a,
+.cm-hmd-internal-link,
+.cm-url,
+.external-link {
+  color: var(--text-accent);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.link-underline a,
+.link-underline .cm-hmd-internal-link,
+.link-underline .cm-url,
+.link-underline .external-link {
+  text-decoration: underline;
+}
+
+.link-underline-hover a:hover,
+.link-underline-hover .cm-hmd-internal-link:hover,
+.link-underline-hover .cm-url:hover,
+.link-underline-hover .external-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--text-accent);
+}
+
+a:hover,
+.cm-hmd-internal-link:hover {
+  color: var(--text-accent-hover);
+}
+
+a.is-unresolved,
+.cm-hmd-internal-link.is-unresolved {
+  opacity: var(--link-unresolved-opacity, 0.7);
+  color: var(--mushroom-poison);
+}
+
+/* Tags */
+.tag {
+  background: var(--tag-background);
+  color: var(--tag-color);
+  border: var(--tag-border-width, 1px) solid var(--tag-border-color);
+  border-radius: var(--tag-shape, 14px);
+  padding: 2px 8px;
+  font-size: 0.85em;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background: rgba(81, 64, 176, 0.3);
+  box-shadow: 0 0 8px rgba(81, 64, 176, 0.4);
+}
+
+/* Blockquotes */
+.markdown-preview-view blockquote {
+  border-left: 4px solid var(--blockquote-border-color);
+  background: rgba(64, 171, 217, 0.08);
+  color: var(--text-normal);
+  padding: 8px 16px;
+  margin: 16px 0;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Callouts */
+.callout {
+  border-left: 4px solid var(--callout-color);
+  background: var(--callout-background);
+  border-radius: 0 6px 6px 0;
+  padding: 12px 16px;
+  margin: 16px 0;
+}
+
+/* Code Blocks */
+.markdown-preview-view pre,
+.markdown-source-view pre {
+  background: var(--code-background);
+  border-left: 4px solid var(--mushroom-accent);
+  border-radius: var(--border-radius, 6px);
+  padding: 12px 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+code {
+  background: var(--code-background);
+  color: var(--code-normal);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Tables */
+th {
+  background: var(--table-header-background) !important;
+  color: var(--mushroom-glow) !important;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: var(--table-row-even-background);
+}
+
+tr:nth-child(odd) {
+  background: var(--table-row-odd-background);
+}
+
+/* Horizontal Rules */
+hr {
+  border-color: var(--mushroom-spore);
+  opacity: 0.5;
+}
+
+/* Bold & Italic */
+strong {
+  color: var(--mushroom-highlight);
+  font-weight: 600;
+}
+
+em {
+  color: var(--mushroom-accent);
+  font-style: italic;
+}
+
+/* ========================================
+   COMMUNITY PLUGIN SUPPORT
+   ======================================== */
+
+/* Dataview */
+.theme-dark .dataview.table-view-table,
+.theme-dark .dataview.table-view-table th,
+.theme-dark .dataview.table-view-table td {
+  border-color: var(--mushroom-spore);
+}
+
+.theme-light .dataview.table-view-table,
+.theme-light .dataview.table-view-table th,
+.theme-light .dataview.table-view-table td {
+  border-color: var(--mushroom-spore);
+}
+
+/* Kanban */
+body .kanban-plugin {
+  --kanban-border: var(--border-width);
+  --interactive-accent: var(--kanban-accent, var(--mushroom-accent));
+  --interactive-accent-hover: var(--mushroom-glow);
+  background-color: var(--background-primary);
+}
+
+body .kanban-plugin__lane {
+  background: var(--background-secondary);
+  border-radius: var(--border-radius, 6px);
+}
+
+body .kanban-plugin__item {
+  background: var(--background-primary);
+  border-radius: var(--border-radius, 4px);
+  border-left: 3px solid var(--kanban-accent, var(--mushroom-accent));
+}
+
+/* Calendar */
+.calendar-container {
+  --calendar-dot-active: var(--calendar-accent, var(--mushroom-accent));
+  --calendar-dot-today: var(--mushroom-highlight);
+}
+
+.calendar-container .day.today {
+  color: var(--mushroom-highlight);
+  font-weight: 600;
+}
+
+.calendar-container .day.active {
+  color: var(--calendar-accent, var(--mushroom-accent));
+}
+
+/* Tasks */
+.markdown-preview-view ul > li.task-list-item,
+.markdown-source-view ul > li.task-list-item {
+  padding-left: 28px;
+}
+
+/* Obsidian Charts */
+.chart-container {
+  border-radius: var(--border-radius, 6px);
+  overflow: hidden;
+}
+
+/* Excalidraw */
+.excalidraw {
+  --color-accent: var(--mushroom-accent);
+}
+
+/* Hover Editor */
+.theme-dark .popover.hover-editor {
+  --he-title-bar-inactive-bg: var(--background-secondary);
+  --he-title-bar-active-bg: var(--background-secondary);
+  --he-title-bar-inactive-fg: var(--text-muted);
+  --he-title-bar-active-fg: var(--text-normal);
+}
+
+.theme-light .popover.hover-editor {
+  --he-title-bar-inactive-bg: var(--background-secondary);
+  --he-title-bar-active-bg: var(--background-secondary);
+  --he-title-bar-inactive-fg: var(--text-muted);
+  --he-title-bar-active-fg: var(--text-normal);
+}
+
+/* QuickAdd */
+.quickadd-modal {
+  background: var(--background-primary);
+  border: 1px solid var(--mushroom-spore);
+}
+
+/* Sliding Panes */
+.workspace-split.mod-vertical > .workspace-leaf-resize-handle {
+  background: var(--mushroom-spore);
+}
+
+.workspace-split.mod-vertical > .workspace-leaf-resize-handle:hover {
+  background: var(--mushroom-accent);
+}
+
+/* ========================================
+   GLOW EFFECTS
+   ======================================== */
+.glow-effect a:hover,
+.glow-effect .cm-hmd-internal-link:hover,
+.glow-effect .workspace-tab-header.is-active,
+.glow-effect .nav-file-title.is-active,
+.glow-effect .nav-folder-title.is-active {
+  text-shadow: 0 0 8px rgba(64, 171, 217, 0.5);
+  box-shadow: 0 0 12px rgba(64, 171, 217, 0.3);
+}
+
+/* ========================================
+   MODALS & POPOVERS
+   ======================================== */
+.modal,
+.prompt {
+  background: var(--background-primary);
+  border: 1px solid var(--mushroom-spore);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+  .workspace-tab-header {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+}
+
+/* ========================================
+STYLE SETTINGS CONFIGURATION
+======================================== */
+/* @settings
+
+name: 🍄 Purple Mushroom Fantasy
+id: purple-mushroom-fantasy
+settings:
+  -
+    id: accent-presets-header
+    title: 🎨 Accent Presets
+    type: heading
+    level: 1
+    collapsed: false
+  -
+    id: accent-preset
+    title: Quick Accent Preset
+    description: Instantly change the theme's mood
+    type: class-select
+    allowEmpty: true
+    default: accent-purple
+    options:
+      -
+        label: 'None (Custom)'
+        value: 'none'
+      -
+        label: '🔵 Default Blue'
+        value: 'accent-default'
+      -
+        label: '💜 Purple Glow'
+        value: 'accent-purple'
+      -
+        label: '💚 Emerald Green'
+        value: 'accent-emerald'
+      -
+        label: '🧡 Amber Glow'
+        value: 'accent-amber'
+      -
+        label: '🩷 Rose Pink'
+        value: 'accent-rose'
+      -
+        label: '🔴 Crimson Red'
+        value: 'accent-crimson'
+  -
+    id: base-colors-header
+    title: 🎭 Base Colors
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: mushroom-base
+    title: Base Background
+    type: variable-themed-color
+    format: hex
+    default-light: '#f8fafc'
+    default-dark: '#0d1524'
+  -
+    id: mushroom-secondary
+    title: Secondary Background
+    type: variable-themed-color
+    format: hex
+    default-light: '#e2e8f0'
+    default-dark: '#240f3f'
+  -
+    id: mushroom-accent
+    title: Primary Accent
+    type: variable-themed-color
+    format: hex
+    default-light: '#5e489c'
+    default-dark: '#40abd9'
+  -
+    id: mushroom-highlight
+    title: Secondary Accent
+    type: variable-themed-color
+    format: hex
+    default-light: '#5893b1'
+    default-dark: '#5140b0'
+  -
+    id: text-header
+    title: 📝 Text Colors
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: text-normal
+    title: Normal Text
+    type: variable-themed-color
+    format: hex
+    default-light: '#1e293b'
+    default-dark: '#e0e6ff'
+  -
+    id: text-muted
+    title: Muted Text
+    type: variable-themed-color
+    format: hex
+    default-light: '#64748b'
+    default-dark: '#a0b0d0'
+  -
+    id: text-accent
+    title: Accent Text (Links)
+    type: variable-themed-color
+    format: hex
+    default-light: '#5e489c'
+    default-dark: '#40abd9'
+  -
+    id: interface-header
+    title: 🖥️ Interface
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: border-radius
+    title: Border Radius
+    type: variable-number-slider
+    format: px
+    default: 6
+    min: 0
+    max: 16
+    step: 1
+  -
+    id: glow-effect
+    title: Enable Glow Effects
+    type: class-toggle
+    default: true
+  -
+    id: typography-header
+    title: 🔤 Typography
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: font-size-normal
+    title: Base Font Size
+    description: Main text size (Ctrl+Scroll still works)
+    type: variable-number-slider
+    default: 16
+    min: 12
+    max: 24
+    step: 0.5
+    format: px
+  -
+    id: font-size-code
+    title: Code Font Size
+    type: variable-number-slider
+    default: 15
+    min: 10
+    max: 20
+    step: 0.5
+    format: px
+  -
+    id: line-height
+    title: Line Height
+    type: variable-number-slider
+    default: 1.6
+    min: 1.2
+    max: 2.0
+    step: 0.1
+  -
+    id: headings-header
+    title: 📋 Headings
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: colorful-headings
+    title: Colorful Headings
+    type: class-toggle
+    default: false
+  -
+    id: h1-color
+    title: H1 Color
+    type: variable-themed-color
+    format: hex
+    default-light: '#5e489c'
+    default-dark: '#5140b0'
+  -
+    id: h2-color
+    title: H2 Color
+    type: variable-themed-color
+    format: hex
+    default-light: '#5893b1'
+    default-dark: '#40abd9'
+  -
+    id: heading-divider
+    title: Heading Divider Lines
+    type: class-toggle
+    default: true
+  -
+    id: links-header
+    title: 🔗 Links
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: link-underline
+    title: Link Underlines
+    type: class-toggle
+    default: false
+  -
+    id: link-underline-hover
+    title: Underline on Hover
+    type: class-toggle
+    default: true
+  -
+    id: link-unresolved-opacity
+    title: Unresolved Link Opacity
+    type: variable-number-slider
+    default: 0.7
+    min: 0.2
+    max: 1.0
+    step: 0.1
+  -
+    id: tags-header
+    title: 🏷️ Tags
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: tag-shape
+    title: Tag Shape
+    type: variable-select
+    default: '14px'
+    options:
+      -
+        label: 'Pill'
+        value: '14px'
+      -
+        label: 'Rounded'
+        value: '4px'
+      -
+        label: 'Square'
+        value: '0px'
+  -
+    id: tag-border-width
+    title: Tag Border Width
+    type: variable-select
+    default: '1px'
+    options:
+      -
+        label: 'None'
+        value: '0px'
+      -
+        label: 'Thin'
+        value: '1px'
+      -
+        label: 'Thick'
+        value: '2px'
+  -
+    id: plugin-header
+    title: 🔌 Plugin Support
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: graph-colors-header
+    title: Graph View
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: graph-line
+    title: Graph Line Color
+    type: variable-themed-color
+    format: hex
+    default-light: '#5e489c'
+    default-dark: '#2560a0'
+  -
+    id: graph-node
+    title: Graph Node Color
+    type: variable-themed-color
+    format: hex
+    default-light: '#5893b1'
+    default-dark: '#40abd9'
+  -
+    id: graph-node-tag
+    title: Tag Node Color
+    type: variable-themed-color
+    format: hex
+    default-light: '#804c3e'
+    default-dark: '#5140b0'
+  -
+    id: kanban-header
+    title: Kanban
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: kanban-accent
+    title: Kanban Accent
+    type: variable-themed-color
+    format: hex
+    default-light: '#5e489c'
+    default-dark: '#40abd9'
+  -
+    id: calendar-header
+    title: Calendar
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: calendar-accent
+    title: Calendar Accent
+    type: variable-themed-color
+    format: hex
+    default-light: '#5893b1'
+    default-dark: '#5140b0'
+  -
+    id: misc-header
+    title: 🎛️ Miscellaneous
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: status-bar-off
+    title: Hide Status Bar
+    type: class-toggle
+    default: false
+  -
+    id: ribbon-off
+    title: Hide Ribbon
+    type: class-toggle
+    default: false
+*/
