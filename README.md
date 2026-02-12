@@ -54,6 +54,10 @@ https://youtu.be/kJEGubIYiZY
 
 ![custom accents](https://github.com/breakthebull/pmf/blob/main/PMF%20Custom%20Accents.PNG)
 
+### Big Calendar Plugin Side Panel View
+
+![view](https://github.com/breakthebull/pmf/blob/main/Big-Calendar-Tweaks.PNG)
+
 
 ---
 
@@ -152,7 +156,10 @@ https://creativecommons.org/publicdomain/zero/1.0/
 
 ## 📜 Changelog
 
-### v1.0.1 (Current)
+### v1.0.2
+- Added [Big Calendar Plugin](obsidian://show-plugin?id=big-calendar) support for easier customization of the calendar appearance in the side panels.
+
+### v1.0.1
 - Fixed Style Settings YAML parsing (removed trailing spaces in values)
 - Improved light mode active nav item text visibility
 - Added 6 accent presets with one-click switching
