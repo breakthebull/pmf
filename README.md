@@ -11,7 +11,7 @@
 
 ### DEMO
 
-![DEMO](https://youtu.be/kJEGubIYiZY)
+https://youtu.be/kJEGubIYiZY
 
 ---
 
