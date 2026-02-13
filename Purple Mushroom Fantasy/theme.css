@@ -255,8 +255,8 @@ body.accent-crimson {
 /* File Explorer */
 .nav-file-title,
 .nav-folder-title {
-  border-radius: var(--border-radius, 4px);
-  transition: all 0.2s ease;
+  color: var(--text-muted);
+
 }
 
 .nav-file-title:hover,
@@ -276,6 +276,7 @@ body.accent-crimson {
   color: var(--text-muted) !important; /* Dark text for visibility */
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.1); /* Subtle contrast boost */
 }
+
 
 /* Graph View */
 .graph-view.color-fill {
@@ -410,7 +411,6 @@ body.accent-crimson {
   background: var(--scrollbar-thumb-bg);
   border-radius: 5px;
   border: 2px solid transparent;
-  background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -424,7 +424,6 @@ button,
   color: var(--text-normal);
   border: 1px solid var(--mushroom-spore);
   border-radius: var(--border-radius, 6px);
-  padding: 6px 16px;
   transition: all 0.2s ease;
 }
 
@@ -609,97 +608,6 @@ em {
    COMMUNITY PLUGIN SUPPORT
    ======================================== */
 
-/* Big Calendar Toolbar */
-/* Integrates with your theme */
-
-.workspace-leaf-content[data-type="big-calendar"] .rbc-toolbar {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  gap: 6px !important;
-  padding: 8px 10px !important;
-  align-items: center !important;
-}
-
-.workspace-leaf-content[data-type="big-calendar"] .rbc-toolbar .rbc-button-group {
-  display: flex !important;
-  gap: 4px !important;
-  align-items: center !important;
-  flex-shrink: 0 !important;
-}
-
-.workspace-leaf-content[data-type="big-calendar"] .rbc-toolbar button {
-  /* Size & spacing */
-  min-height: 26px !important;
-  padding: 4px 10px !important;
-  font-size: var(--font-ui-small) !important;
-  line-height: 1.3 !important;
-  white-space: nowrap !important;
-
-  /* Appearance */
-  background: var(--background-secondary) !important;
-  color: var(--text-normal) !important;
-  border: 1px solid var(--background-modifier-border) !important;
-  border-radius: var(--radius-s) !important;
-  cursor: pointer !important;
-  transition: all 0.2s ease !important;
-}
-
-/* Hover state */
-.workspace-leaf-content[data-type="big-calendar"] .rbc-toolbar button:hover {
-  background: var(--background-modifier-hover) !important;
-  color: var(--text-accent) !important;
-}
-
-/* Active view (Month/Week/Day/Agenda) */
-.workspace-leaf-content[data-type="big-calendar"] .rbc-toolbar button.rbc-active {
-  background: var(--interactive-accent) !important;
-  color: var(--text-on-accent) !important;
-  border-color: var(--interactive-accent) !important;
-}
-
-/* Style the month/year label (non-interactive) */
-.workspace-leaf-content[data-type="big-calendar"] .rbc-toolbar .rbc-button-group:nth-child(2) button {
-  background: transparent !important;
-  border: none !important;
-  pointer-events: none !important;
-  font-weight: 600 !important;
-  color: var(--text-muted) !important;
-  padding: 4px 8px !important;
-}
-
-/* == Make Big Calendar Larger == */
-
-/* 1. Increase base font size */
-.workspace-leaf-content[data-type="big-calendar"] .rbc-calendar {
-  font-size: var(--font-ui) !important; /* instead of small */
-}
-
-/* 2. Make day cells taller and wider */
-.workspace-leaf-content[data-type="big-calendar"] .rbc-date-cell,
-.workspace-leaf-content[data-type="big-calendar"] .rbc-header,
-.workspace-leaf-content[data-type="big-calendar"] .rbc-day-bg {
-  min-height: 25px !important;
-  height: auto !important;
-  min-width: fit-content;
-  padding: 3px 6px !important;
-  font-size: small;
-}
-
-/* 3. Make day numbers bigger */
-.workspace-leaf-content[data-type="big-calendar"] .rbc-button-link {
-  font-size: var(--font-ui) !important;
-  padding: 4px 3px !important;
-  line-height: 2.0 !important;
-  align-items: center;
-}
-
-/* 4. Optional: Widen the whole calendar if in a narrow panel */
-.workspace-leaf-content[data-type="big-calendar"] .calendar-container {
-  min-width: fit-content;
-  width: fit-content;
-  min-height: 290px;
-  height:fit-content;
-}
 
 /* Dataview */
 .theme-dark .dataview.table-view-table,
@@ -749,10 +657,7 @@ body .kanban-plugin__item {
 }
 
 /* Tasks */
-.markdown-preview-view ul > li.task-list-item,
-.markdown-source-view ul > li.task-list-item {
-  padding-left: 28px;
-}
+
 
 /* Obsidian Charts */
 .chart-container {
@@ -801,7 +706,6 @@ body .kanban-plugin__item {
 .glow-effect a:hover,
 .glow-effect .cm-hmd-internal-link:hover,
 .glow-effect .workspace-tab-header.is-active,
-.glow-effect .nav-file-title.is-active,
 .glow-effect .nav-folder-title.is-active {
   text-shadow: 0 0 8px rgba(64, 171, 217, 0.5);
   box-shadow: 0 0 12px rgba(64, 171, 217, 0.3);
@@ -823,7 +727,6 @@ body .kanban-plugin__item {
 @media (max-width: 768px) {
   .workspace-tab-header {
     font-size: 0.9em;
-    padding: 6px 12px;
   }
 }
 
@@ -1107,19 +1010,6 @@ settings:
     format: hex
     default-light: '#804c3e'
     default-dark: '#5140b0'
-  -
-    id: kanban-header
-    title: Kanban
-    type: heading
-    level: 3
-    collapsed: true
-  -
-    id: kanban-accent
-    title: Kanban Accent
-    type: variable-themed-color
-    format: hex
-    default-light: '#5e489c'
-    default-dark: '#40abd9'
   -
     id: calendar-header
     title: Calendar
