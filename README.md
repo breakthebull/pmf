@@ -161,6 +161,9 @@ https://creativecommons.org/publicdomain/zero/1.0/
 
 ## 📜 Changelog
 
+### v1.0.3
+- Added images that can be turned off easily.
+
 ### v1.0.2
 - Added [Big Calendar Plugin](obsidian://show-plugin?id=big-calendar) support for easier customization of the calendar appearance in the side panels.
 - Fixed Nav file drift.
