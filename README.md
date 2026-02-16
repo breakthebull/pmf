@@ -47,7 +47,8 @@ https://youtu.be/kJEGubIYiZY
 |---------------------|-------------------|
 | ![Dark Mode](https://github.com/breakthebull/pmf/blob/main/PMF%20Dark.PNG) | ![Light Mode](https://github.com/breakthebull/pmf/blob/main/PMF%20Light.PNG) |
 | ![Dark Mode](https://github.com/breakthebull/pmf/blob/main/PMF%20Dark%20Settings.PNG) | ![Light Mode](https://github.com/breakthebull/pmf/blob/main/PMR%20Settings.PNG) |
-| ![Dark Mode](https://github.com/breakthebull/pmf/blob/main/PMF%20Dark%20Community.PNG) | ![Light Mode](https://github.com/breakthebull/pmf/blob/main/PMF%20Light%20Community.PNG) |
+| ![Dark Mode](https://github.com/breakthebull/pmf/blob/main/PMF%20Dark%20Community.PNG) | ![Light Mode](https://github.com/breakthebull/pmf/blob/main/PMF%20Light%20Community.PNG) | 
+| ![Dark Mode](https://github.com/breakthebull/pmf/blob/main/PMF%20Dark%20Images.PNG) | ![Light Mode](https://github.com/breakthebull/pmf/blob/main/PMF%20Light%20Images.PNG) |
 
 
 ### Custom Accents
@@ -57,6 +58,10 @@ https://youtu.be/kJEGubIYiZY
 ### Big Calendar Plugin Side Panel View
 
 ![view](https://github.com/breakthebull/pmf/blob/main/Big-Calendar-Tweaks.PNG)
+
+### Toggle to Turn Off Images
+
+![view](https://github.com/breakthebull/pmf/blob/main/PMF%20New%20Toggle.PNG)
 
 
 ---
