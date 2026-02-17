@@ -285,12 +285,14 @@ body.sidebar-bg-toggle.theme-light .mod-sidedock .workspace-leaf-content::before
   background: rgba(255, 255, 255, 0.473); /* White overlay = brighter */
   pointer-events: none;
   z-index: 0;
+
 }
 
 /* Ensure content stays above background */
 body.sidebar-bg-toggle .mod-sidedock .workspace-leaf-content > * {
   position: relative;
   z-index: 1;
+  backdrop-filter: blur(1.5px);
 }
 
 /* ========================================
